@@ -20,7 +20,8 @@ function connect(event){
         usernamepage.classList.add('hidden');
         chatPage.classList.remove('hidden');
 
-        var socket = new SockJS('/ws');
+        var socket = new SockJS('https://protected-tundra-28483-5eedd6d14e17.herokuapp.com/ws');
+
 
         stompClient = Stomp.over(socket);
         stompClient.connect({},onConnected,onError);
